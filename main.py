@@ -4,12 +4,12 @@ import re
 import string
 import random
 
-IN_DIR = Path(r'in')
-DEFAULT_DRAFT = True
+IN_DIR = Path(os.environ['GITHUB_WORKSPACE'] + '/vault')
+DEFAULT_DRAFT = False
 
 # --- CHANGE THE ABOVE, NOTHING BELOW THIS LINE ---
 
-OUT_DIR = Path(r'out')
+OUT_DIR = Path(r'./')
 
 def sanitize_string(s):
     """
